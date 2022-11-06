@@ -332,10 +332,7 @@ background-position: center; /*siempre la centra aun si se cambia el tamaño com
         
         display: flex;
     }
-    #hero{
-        display: flex;
-    }
-}
+}    
 
 /*----------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------- Responsive Para resolucion intermedia(@media) --------------------------------------------
