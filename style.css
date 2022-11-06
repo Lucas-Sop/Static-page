@@ -102,16 +102,18 @@ header a:hover{
 
 .navbar{
     background-color: whitesmoke;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     display:inline-block;
     flex-direction: row;
     /* justify-content: center; */
     /* position:fixed; */
+    margin-top: 38px;
 }
 
 
 .navbar-button{
-    background-color: gray;
+   
+    background-color: white;
     font-size: 40px;
     padding: 3px 5px 3px 5px;
     border-color: black;
@@ -145,11 +147,11 @@ header a:hover{
 }
 
 
-
-.navbar ul:hover .navbar-button{  /*Se borra el boton al pasar el mouse*/
+/*
+.navbar ul:hover .navbar-button{  Se borra el boton al pasar el mouse
     
 }
-
+*/
 
 
 /* .navbar:hover > ul{
@@ -311,9 +313,7 @@ background-position: center; /*siempre la centra aun si se cambia el tamaño com
 
 @media (min-width: 720px){
 
-    header{
-        position: sticky;
-    }
+  
     header .container{
        flex-direction: column-reverse;
        align-items: center ;
@@ -322,8 +322,13 @@ background-position: center; /*siempre la centra aun si se cambia el tamaño com
 
     .navbar-button{
     display:none;
+    
     } 
     
+    .navbar{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
     .nav-list {
         display:flex;
         
@@ -331,6 +336,10 @@ background-position: center; /*siempre la centra aun si se cambia el tamaño com
     header .container ul{
         
         display: flex;
+    }
+    header{
+        position: sticky;
+        top:0px;
     }
 }    
 
