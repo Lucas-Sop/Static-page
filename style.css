@@ -1,0 +1,342 @@
+/*---------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------Reset y configuraciones globales-----------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+*{
+    margin:0;
+    
+    
+}
+
+/*El salto dentro de la misma pagina es mas lento*/
+html{
+    scroll-behavior: smooth;
+}
+
+/*Reseteo del margin y eleccion de la tipografia*/
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: rgb(245, 245, 245);  
+}
+
+/*Tamaño de letra de cada etiqueta*/
+
+h1{font-size:3.5em;}
+h2{font-size:2.7em;}
+h3{font-size: 2em;}
+p{font-size: 1.25em;}
+ul{list-style: none;}
+li{font-size: 1.25em;}
+
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------ Botones Info+ --------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.button-info{
+    font-size:1.5em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 15px;
+    border: 2px solid rgba(0,0,0,0.5) ;
+    color: white;
+    background-color: rgba(138,40,280,1);
+}
+/*Cambio de color al pasar mouse por el button*/
+.button-info:hover{
+    background-color: rgb(100,33,200);
+}
+/*-----------------------------------------*/
+
+.container{
+    max-width: 450px;
+    margin:auto;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------ Header --------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+header{
+    background-color:rgba(245,245,245);
+   
+        position: fixed;
+        width: 100%;
+    }
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 10px 0px 5px;
+    width: 100%;
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------- ARCHOR (enlances) ---------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Formato a los archor (enlaces)*/
+header a{
+    padding: 5px 12px;  
+    text-decoration: none; /*Le saco subrayado*/
+    font-weight: bold; /*negrita*/
+    color: black /*Color de la letra*/
+}
+
+/*Color al pasar el mouse por las palabras del nav*/
+header a:hover{
+    color:lightcoral;
+}
+
+
+
+
+
+            /*---------------------------------------------------------------------------------------------------------------------------------------------
+            ----------------------------------------------------------------- NAV -------------------------------------------------------------------------
+            ----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.navbar{
+    background-color: whitesmoke;
+    margin-bottom: 20px;
+    display:inline-block;
+    flex-direction: row;
+    /* justify-content: center; */
+    /* position:fixed; */
+}
+
+
+.navbar-button{
+    background-color: gray;
+    font-size: 40px;
+    padding: 3px 5px 3px 5px;
+    border-color: black;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.navbar-button:hover{
+    background-color: rgb(100,100,100);
+    cursor: pointer;
+
+}
+
+
+            /*----------------------------------------------------------------------------------------------------------------------------------------
+            --------------------------------------- Desaparecer boton y que aparezca la lista --------------------------------------------------------
+            -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+.nav-list {
+    display:none;
+}  
+    /*Lista por defecto oculta*/
+
+
+
+/*Al pasar el mouse se activa la lista*/
+.navbar ul:hover .nav-list{   
+    display:flex;
+   
+}
+
+
+
+.navbar ul:hover .navbar-button{  /*Se borra el boton al pasar el mouse*/
+    
+}
+
+
+
+/* .navbar:hover > ul{
+    display:none;
+} */
+
+/* .main-nav{
+    display:none;
+    list-style: none;
+} */
+
+
+
+
+
+            /*----------------------------------------------------------------------------------------------------------------------------------------
+            ---------------------------------------------------------- Logo --------------------------------------------------------------------------
+            ------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*Formato al logo*/
+header .logo{
+    margin: 10px;;
+    padding: 0px 0px;
+    font-weight: bold;
+   
+}
+/*Se pone gris al pasar el mouse*/
+header .logo:hover{
+    opacity: 0.5;
+}
+/*Centramos el nav*/
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------- Seccion: HERO ---------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Insertamos imagen con una pequeña opacidad. */ 
+#hero{
+display:flex;               /**/
+align-items: center;        /*Alineamos el hero*/
+justify-content: center;    
+/*text-align: center;*/         /*Centramos el texto*/
+flex-direction: column;   
+height: 80vh;         /*Largo que ocupa el hero en la pantalla
+color: white;      /*color letra*/
+background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+),url("media/principal.jpg");
+background-repeat: no-repeat; 
+background-size: cover; /*cubre el ancho del hero*/
+background-position: center; /*siempre la centra aun si se cambia el tamaño completo de la imagen*/
+}
+
+/*Color de la letra sobre la imagen*/
+#hero h1{
+    color:white;
+    font-size: 3.5em;
+}
+
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------- Seccion: Sobre Nosotros ---------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*padding y alineamos el container de la seccion*/
+#Sobre_Nosotros .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------- Seccion: Servicios ---------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*Color del fondo, color letra y centramos el texto en la seccion*/
+#Servicios{
+    background-color: rgb(30,30,30);
+    color: white;
+    text-align: center;
+}
+
+/* Le agregamos padding para separar*/
+#Servicios .container{
+    padding: 60px 12px;
+}
+
+#Servicios h2{
+    margin-top: 0;
+    font-size:  3.2em;
+}
+
+/*Desaparecer el texto en tamaño mobile*/
+#Servicios p{
+    display: none; 
+}
+
+/*Formato a los cuadrados de servicios*/
+#Servicios .cuadrados{
+    background-position: center center;
+    background-size: cover;
+    border: 5px;
+    padding: 50px;
+    margin: 20px;
+    width: 300px;
+    border-radius: 20px;
+    border-color:  rgb(255, 255, 255);
+    
+}
+
+.cuadrados:first-child{                  /*Seleccionamos el primero de los cuadrados*/
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url("media/tomografia.png");
+   
+}
+
+.cuadrados:nth-child(2){                /*Seleccionamos el segundo de los cuadrados*/
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/tomografia.png")
+    
+}
+
+
+
+.cuadrados:nth-child(3){                /*Seleccionamos el tercero de los cuadrados*/
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/tomografia.png")
+    
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------- Seccion: Sobre Nosotros ---------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------- Responsive Para PC(@media) ---------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+@media (min-width: 720px){
+
+    header{
+        position: sticky;
+    }
+    header .container{
+       flex-direction: column-reverse;
+       align-items: center ;
+
+    }
+
+    .navbar-button{
+    display:none;
+    } 
+    
+    .nav-list {
+        display:flex;
+        
+    }  
+    header .container ul{
+        
+        display: flex;
+    }
+    #hero{
+        display: flex;
+    }
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------- Responsive Para resolucion intermedia(@media) --------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------*/
