@@ -228,8 +228,10 @@ background-position: center; /*siempre la centra aun si se cambia el tamaño com
 #Sobre_Nosotros .container{
     text-align: center;
     padding: 200px 12px;
+    display: flex;
+    
 }
-
+#Sobre_Nosotros .container .Videomp4{display:none;}
 
 /*----------------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------- Seccion: Servicios ---------------------------------------------------------------
@@ -313,25 +315,22 @@ background-position: center; /*siempre la centra aun si se cambia el tamaño com
 
 @media (min-width: 720px){
 
-  
+                    /*Header*/
+
     header .container{
        flex-direction: column-reverse;
        align-items: center ;
 
     }
-
     .navbar-button{
     display:none;
-    
     } 
-    
     .navbar{
         margin-top: 0px;
         margin-bottom: 0px;
     }
     .nav-list {
-        display:flex;
-        
+        display:flex; 
     }  
     header .container ul{
         
@@ -341,6 +340,11 @@ background-position: center; /*siempre la centra aun si se cambia el tamaño com
         position: sticky;
         top:0px;
     }
+
+    /*Sobre_Nosotros*/
+    #Sobre_Nosotros .container .Videomp4{display:flex;}
+
+    
 }    
 
 /*----------------------------------------------------------------------------------------------------------------------------------------
