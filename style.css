@@ -1,11 +1,8 @@
 /*---------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------Reset y configuraciones globales-----------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------*/
-
 *{
-    margin:0;
-    
-    
+    margin:0;    
 }
 
 /*El salto dentro de la misma pagina es mas lento*/
@@ -18,6 +15,7 @@ body{
     font-family: 'Roboto', sans-serif;
     margin: 0;
     background-color: rgb(245, 245, 245);  
+   
 }
 
 /*Tamaño de letra de cada etiqueta*/
@@ -50,10 +48,7 @@ li{font-size: 1.25em;}
 }
 /*-----------------------------------------*/
 
-.container{
-    max-width: 450px;
-    margin:auto;
-}
+
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------ Header --------------------------------------------------------------
@@ -61,9 +56,10 @@ li{font-size: 1.25em;}
 
 header{
     background-color:rgba(245,245,245);
-   
-        position: fixed;
-        width: 100%;
+    display: flex;
+    position: sticky;
+    top: 0px;
+    width: 100%;
     }
 
 header .container {
@@ -100,19 +96,15 @@ header a:hover{
             ----------------------------------------------------------------- NAV -------------------------------------------------------------------------
             ----------------------------------------------------------------------------------------------------------------------------------------------*/
 
-.navbar{
+.container .navbar{
     background-color: whitesmoke;
     margin-bottom: 0px;
-    display:inline-block;
     flex-direction: row;
-    /* justify-content: center; */
-    /* position:fixed; */
     margin-top: 38px;
 }
 
 
-.navbar-button{
-   
+.navbar-button{ 
     background-color: white;
     font-size: 40px;
     padding: 3px 5px 3px 5px;
@@ -125,7 +117,6 @@ header a:hover{
 .navbar-button:hover{
     background-color: rgb(100,100,100);
     cursor: pointer;
-
 }
 
 
@@ -135,6 +126,7 @@ header a:hover{
 
 .nav-list {
     display:none;
+    
 }  
     /*Lista por defecto oculta*/
 
@@ -143,9 +135,14 @@ header a:hover{
 /*Al pasar el mouse se activa la lista*/
 .navbar ul:hover .nav-list{   
     display:flex;
-   
+    position: sticky;
+  
 }
-
+.container .logo:hover .logo{   
+    display:none;
+   
+  
+}
 
 /*
 .navbar ul:hover .navbar-button{  Se borra el boton al pasar el mouse
@@ -177,6 +174,8 @@ header .logo{
     margin: 10px;;
     padding: 0px 0px;
     font-weight: bold;
+    box-sizing:content-box;
+    
    
 }
 /*Se pone gris al pasar el mouse*/
@@ -223,15 +222,17 @@ background-position: center; /*siempre la centra aun si se cambia el tamaño com
 --------------------------------------------------------- Seccion: Sobre Nosotros ---------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------*/
 
-
+#Sobre_Nosotros{
+    
+}
 /*padding y alineamos el container de la seccion*/
 #Sobre_Nosotros .container{
     text-align: center;
     padding: 200px 12px;
-    display: flex;
-    
 }
-#Sobre_Nosotros .container .Videomp4{display:none;}
+
+#Sobre_Nosotros .container .video-container{
+    display:none;}
 
 /*----------------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------- Seccion: Servicios ---------------------------------------------------------------
@@ -313,40 +314,68 @@ background-position: center; /*siempre la centra aun si se cambia el tamaño com
 ------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
-@media (min-width: 720px){
+@media (min-width: 780px){
 
-                    /*Header*/
+    /*----------Header---------------------*/
 
+
+    .container .navbar{
+         margin-top: 0px;
+    }
     header .container{
+       
+
        flex-direction: column-reverse;
        align-items: center ;
-
     }
     .navbar-button{
-    display:none;
+        display:none;
     } 
-    .navbar{
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
     .nav-list {
         display:flex; 
     }  
     header .container ul{
-        
         display: flex;
+        
     }
     header{
         position: sticky;
         top:0px;
     }
 
-    /*Sobre_Nosotros*/
-    #Sobre_Nosotros .container .Videomp4{display:flex;}
+    /*--------------Sobre_Nosotros-----------------*/
+    #Sobre_Nosotros .container {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: space-evenly;
+        align-content: center;
+    }
 
+    #Sobre_Nosotros .container .video-container{
+        display:flex;
+        flex-direction: row; 
+             
+    }
     
+    #Sobre_Nosotros .container .video-container video{
+        max-width: calc(40vw);
+    }    
+
+   
+    
+    #Somos-Nosotros .texto {
+        width: 60%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+       
+    }
+
+ 
 }    
 
 /*----------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------- Responsive Para resolucion intermedia(@media) --------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------*/
+
