@@ -3,10 +3,12 @@
 /*---------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------Reset y configuraciones globales-----------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------*/
-*{margin:0;}
+*{margin:0;
+    scroll-margin-top: 100px;}
 
 
-html{scroll-behavior: smooth;}       /*El salto dentro de la misma pagina es mas lento*/
+html{scroll-behavior: smooth; 
+ }       /*El salto dentro de la misma pagina es mas lento*/
 
 /*Reseteo del margin y eleccion de la tipografia*/
 body{
