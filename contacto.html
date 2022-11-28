@@ -1,13 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--style.css-->
+  <link rel="stylesheet" href=".\style.css">
+  <!--Enlace fonts google-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- fonts ROBOTO-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400&display=swap" rel="stylesheet">
+  <!--Iconos de fontawesome (fa-bars navs-button etc)-->
+  <script src="https://kit.fontawesome.com/3e7d199da4.js" crossorigin="anonymous"></script>
+  <!--CDN bootstrap-->
+  <!--Link bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <title>Contacto</title>
+</head> 
+
 <body>
-    hola
-    
+<header id="Contacto">    
+  <div class="container">
+    <nav class="navbar">
+      <ul>
+        <li>
+          <div class="button">
+            <button class="navbar-button" type="button">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+          </div>
+        </li>
+        <li>
+          <u1 class="main-menu">
+            <li><a class="nav-list nav-item1" href="./main.html">Inicio</a></li>
+            <li><a class="nav-list nav-item2" href="./main.html#nosotros">Nosotros</a></li>
+            <li><a class="nav-list nav-item3" href="./main.html#Servicios">Servicios</a></li>
+            <li><a class="nav-list nav-item4" href="./main.html#Tomografia">Tomografia</a></li>
+            <li><a class="nav-list nav-item4" href="./main.html#Escaneo">Escaneo</a></li>
+            <li><a class="nav-list nav-item6" href="#Contacto">Contacto</a></li>
+          </u1>    
+         </li>
+      </ul>
+    </nav>
+    <div class="logo">    
+      <a href="#Tomografia"><img href="#Inicio" src="media/logo.jpg"></a>
+    </div>      
+  </div>                     
+</header>
+   
+<section id="hero2">
+  <div class="container">
+    <div class="texto">
+      <div class="subtitulo">
+        <h2>Comunicate con nosotros</h2>
+      </div>
+      <div class="titulo">
+        <h1>¿Cómo podemos ayudarte?</h1>
+      </div>
+    </div>
+    <div>hgfog</div>
+  </div>  
+</section>
+
+<section id="Contactos">
+  <div class="container">  
+    <div class="imagen">
+      <div class="textS">
+        <p>Para realizar un consulta sobre nuestros servicios, te invitamos a que nos escribas a través de nuestro formulario de forma fácil, práctica y rápida.
+        Una vez recibido, en el transcurso de los próximos días, nos comunicaremos con usted por vía telefónica.<br>
+        ¡Muchas gracias!</p>
+      </div>
+      <img src="https://psicologaenmadrid.com/wp-content/uploads/2013/06/comunicacion-gritos1.png" alt="">
+    </div>
+    <div class="mainForm">
+      <p>Para realizar un consulta sobre nuestros servicios, te invitamos a que nos escribas a través de nuestro formulario de forma fácil, práctica y rápida.
+        Una vez recibido, en el transcurso de los próximos días, nos comunicaremos con usted por vía telefónica.<br>
+        ¡Muchas gracias!</p>
+      <form action="https://formspree.io/f/xnqrzbrq" method="POST" class="form"id="form-contacto">
+        <select name="area" required="">
+          <option selected="" value="">Seleccione Área</option>
+          <option value="lucasaveit@gmail.com">Tomografía</option>
+          <option value="lucasaveit@gmail.com">RRHH</option>
+          <option value="lucasaveit@gmail.com">Calidad</option>
+          <option value="lucasaveit@gmail.com">General</option>
+        </select>
+        <div class="campo">
+          <p>Nombre</p>
+          <input class="nombre"type="text" name="nombre"  required=""></div>
+        <div class="campo">
+          <p>Empresa</p>
+          <input class="empresa" type="text" name="empresa"  required=""></div>
+        <div class="campo">
+          <p>E-mail</p>
+          <input class="mail"type="email" name="email" placeholder="ejemplo@ejemplo.com" required=""></div>
+        <div class="campo">
+          <p>Telefono</p>
+          <input class="telefono"type="number" name="telefono" placeholder="+54 351 600000" required=""></div>
+        <div class="campo">
+          <p>Comentario</p>
+          <textarea name="comentarios" required=""></textarea>
+        </div>
+        <br>
+        <button>
+            <span>Enviar Consulta</span> <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>  
 </body>
+
+<footer class="footer" style="margin-top: 200px">
+  <div class="ondas">
+    <div class="onda" id="onda1"></div>
+    <div class="onda" id="onda2"></div>
+    <div class="onda" id="onda3"></div>
+    <div class="onda" id="onda4"></div>
+  </div>
+  <ul class="redSocial">
+    <li class="redSocial_item"><a class="redSocial_link" href="#">
+      <ion-icon name="logo-facebook"></ion-icon></a>
+    </li>
+    <li class="redSocial_item"><a class="redSocial_link" href="#">
+      <ion-icon name="logo-twitter"></ion-icon></a>
+    </li>
+    <li class="redSocial_item"><a class="redSocial_link" href="#">
+      <ion-icon name="logo-linkedin"></ion-icon></a>
+    </li>
+    <li class="redSocial_item"><a class="redSocial_link" href="#">
+      <ion-icon name="logo-instagram"></ion-icon></a>
+    </li>
+  </ul>
+  <ul class="menu">
+    <li class="menu_item"><a class="menu_link" href="./main.html">Inicio</a></li>
+    <li class="menu_item"><a class="menu_link" href="./main.html#nosotros">Nosotros</a></li>
+    <li class="menu_item"><a class="menu_link" href="./main.html#Servicios">Servicios</a></li>
+    <li class="menu_item"><a class="menu_link" href="./main.html#Tomografia">Testimonios</a></li>
+    <li class="menu_item"><a class="menu_link" href="./main.html#Escaneo">Escaneo</a></li>
+    <li class="menu_item"><a class="menu_link" href="#Contacto">Contacto</a></li>
+  </ul>
+  <p>&copy;2022 Gomez Lucas | All Rights Reserved</p>
+</footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </html>

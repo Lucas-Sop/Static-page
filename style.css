@@ -3,24 +3,19 @@
 /*---------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------Reset y configuraciones globales-----------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------*/
-*{
-    margin:0;    
-}
+*{margin:0;}
 
-/*El salto dentro de la misma pagina es mas lento*/
-html{
-    scroll-behavior: smooth;
-}
+
+html{scroll-behavior: smooth;}       /*El salto dentro de la misma pagina es mas lento*/
 
 /*Reseteo del margin y eleccion de la tipografia*/
 body{
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    background-color: rgb(245, 245, 245);  
-   
+    background-color: rgb(245, 245, 245);
 }
 
-/*Tamaño de letra de cada etiqueta*/
+/*Tamaño de letra de cada etiqueta por defecto*/
 
 h1{font-size:3.5em;}
 h2{font-size:2.7em;}
@@ -42,15 +37,10 @@ li{font-size: 1.25em;}
     border-radius: 15px;
     border: 2px solid rgba(0,0,0,0.5) ;
     color: white;
-    background-color: rgba(138,40,280,1);
+    background-color: #3586ff;
 }
-/*Cambio de color al pasar mouse por el button*/
-.button-info:hover{
-    background-color: rgb(100,33,200);
-}
-/*-----------------------------------------*/
 
-
+.button-info:hover{background-color: #0063f8;}    /*Cambio de color al pasar mouse por el button*/
 
 /*---------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------ Header --------------------------------------------------------------
@@ -62,7 +52,7 @@ header{
     position: block;
     top: 0px;
     width: 100%;
-    }
+}
 
 header .container {
     display: flex;
@@ -72,31 +62,23 @@ header .container {
     width: 100%;
 }
 
-
 /*----------------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------- ARCHOR (enlances) ---------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------*/
 
-/*Formato a los archor (enlaces)*/
-header a{
+
+header a{          /*Formato a los archor (enlaces)*/
     padding: 5px 12px;  
     text-decoration: none; /*Le saco subrayado*/
     font-weight: bold; /*negrita*/
     color: black /*Color de la letra*/
 }
 
-/*Color al pasar el mouse por las palabras del nav*/
-header a:hover{
-    color:lightcoral;
-}
+header a:hover{color:lightcoral;} /*Color al pasar el mouse por las palabras del nav*/
 
-
-
-
-
-            /*---------------------------------------------------------------------------------------------------------------------------------------------
-            ----------------------------------------------------------------- NAV -------------------------------------------------------------------------
-            ----------------------------------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------- NAV -------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------*/
 
 .container .navbar{
     background-color: whitesmoke;
@@ -104,7 +86,6 @@ header a:hover{
     flex-direction: row;
     margin-top: 38px;
 }
-
 
 .navbar-button{ 
     background-color: white;
@@ -121,156 +102,124 @@ header a:hover{
     cursor: pointer;
 }
 
+/*----------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------- Desaparecer boton y que aparezca la lista --------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------*/
 
-            /*----------------------------------------------------------------------------------------------------------------------------------------
-            --------------------------------------- Desaparecer boton y que aparezca la lista --------------------------------------------------------
-            -----------------------------------------------------------------------------------------------------------------------------------------*/
-
-.nav-list {
-    display:none;
+.nav-list {display:none;}  /*Lista por defecto oculta*/
     
-}  
-    /*Lista por defecto oculta*/
-
-
-
-/*Al pasar el mouse se activa la lista*/
-.navbar ul:hover .nav-list{   
+.navbar ul:hover .nav-list{   /*Al pasar el mouse se activa la lista*/
     display:flex;
     position: sticky;
-  
-}
-.container .logo:hover .logo{   
-    display:none;
-   
-  
 }
 
-/*
-.navbar ul:hover .navbar-button{  Se borra el boton al pasar el mouse
-    
-}
-*/
+.container .logo:hover .logo{display:none;}
 
+/*----------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------- Logo --------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------*/
 
-/* .navbar:hover > ul{
-    display:none;
-} */
-
-/* .main-nav{
-    display:none;
-    list-style: none;
-} */
-
-
-
-
-
-            /*----------------------------------------------------------------------------------------------------------------------------------------
-            ---------------------------------------------------------- Logo --------------------------------------------------------------------------
-            ------------------------------------------------------------------------------------------------------------------------------------------*/
-
-
-/*Formato al logo*/
-header .logo{
+header .logo{       /*Formato al logo*/
     margin: 10px;;
     padding: 0px 0px;
     font-weight: bold;
     box-sizing:content-box;
-    
-   
 }
-/*Se pone gris al pasar el mouse*/
-header .logo:hover{
+
+header .logo:hover{     /*Se pone gris al pasar el mouse*/
     opacity: 0.5;
 }
-/*Centramos el nav*/
 
+/*-----------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------- Seccion: HERO(index) y HERO2(contact) --------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------*/
+#hero,#hero2{
+    display:flex;               
+    align-items: center;        /*Alineamos los hero*/
+    justify-content: center;    
+    flex-direction: column; 
+}
 
-
-
-/*----------------------------------------------------------------------------------------------------------------------------------------
---------------------------------------------------------- Seccion: HERO ---------------------------------------------------------------------------
-------------------------------------------------------------------------------------------------------------------------------------------*/
-
-/*Insertamos imagen con una pequeña opacidad. */ 
 #hero{
-display:flex;               /**/
-align-items: center;        /*Alineamos el hero*/
-justify-content: center;    
-/*text-align: center;*/         /*Centramos el texto*/
-flex-direction: column;   
-height: 80vh;         /*Largo que ocupa el hero en la pantalla
-color: white;      /*color letra*/
-background-image: linear-gradient(
-    0deg,
-    rgba(0,0,0,0.5),
-    rgba(0,0,0,0.5)
-),url("media/principal.jpg");
-background-repeat: no-repeat; 
-background-size: cover; /*cubre el ancho del hero*/
-background-position: center; /*siempre la centra aun si se cambia el tamaño completo de la imagen*/
+    height: 80vh;         
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url("media/principal.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover;         /*cubre el ancho del hero*/
+    background-position: center;    /*siempre la centra aun si se cambia el tamaño completo de la imagen*/
 }
 
-/*Color de la letra sobre la imagen*/
-#hero h1{
-    color:white;
-    font-size: 3.5em;
+#hero2{
+    height: 20vh;         
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url("media/herocontact.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover; /*cubre el ancho del hero*/
+    background-position: center; /*siempre la centra aun si se cambia el tamaño completo de la imagen*/
 }
 
+#hero2 .container{
+    padding-top: 80px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin:0;    
+}
 
+#hero h1{color:white; font-size: 3.5em;}
+#hero2 .texto{color:white; margin: 0 auto;}
+#hero2 h1{font-size: 1.5em; text-decoration:overline;}
+#hero2 h2{font-size: 0.8em;}
 
 /*----------------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------- Seccion: Sobre Nosotros ---------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------*/
 
-#Sobre_Nosotros{
-    
-}
-/*padding y alineamos el container de la seccion*/
-#Sobre_Nosotros .container{
+#Sobre_Nosotros .container{     /*padding y alineamos el container de la seccion*/
     text-align: center;
     padding: 200px 12px;
 }
 
-#Sobre_Nosotros .container .video-container{
-    display:none;}
+#Sobre_Nosotros .container .video-container{display:none;}
 
 /*----------------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------- Seccion: Servicios ---------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------*/
 
-
-/*Color del fondo, color letra y centramos el texto en la seccion*/
-#Servicios{
+#Servicios{             /*Color del fondo, color letra y centramos el texto en la seccion*/
     background-color: rgb(30,30,30);
     color: white;
-    text-align: center;
-    
+    text-align: center;  
 }
 
-/* Le agregamos padding para separar*/
-#Servicios .container{
-    padding: 60px 12px;
-    
+#Servicios .container{padding: 200px 12px;     /* Le agregamos padding para separar*/
 }
 
 #Servicios h2{
     margin-top: 0;
     font-size:  3.2em;
+    margin-top: -50px;
+    margin-bottom: 50px;
 }
+
 #Servicios .Cursos{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-/*Desaparecer el texto en tamaño mobile*/
-#Servicios p{
+
+#Servicios p{       /*Desaparecer el texto en tamaño mobile*/
     display: none; 
 }
 
-/*Formato a los cuadrados de servicios*/
-#Servicios .cuadrados{
+#Servicios .cuadrados{  /*Formato a los cuadrados de servicios*/
     background-position: center center;
     background-size: cover;
     border: 5px;
@@ -281,14 +230,12 @@ background-position: center; /*siempre la centra aun si se cambia el tamaño com
     border-color:  rgb(255, 255, 255);    
 }
 
-
 .cuadrados:first-child{                  /*Seleccionamos el primero de los cuadrados*/
     background-image: linear-gradient(
         0deg,
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     ),url("media/tomografia.png");
-   
 }
 
 .cuadrados:nth-child(2){                /*Seleccionamos el segundo de los cuadrados*/
@@ -298,10 +245,7 @@ background-position: center; /*siempre la centra aun si se cambia el tamaño com
         rgba(0,0,0,0.5)
     )
     ,url("media/scanneo2.jpeg")
-    
 }
-
-
 
 .cuadrados:nth-child(3){                /*Seleccionamos el tercero de los cuadrados*/
     background-image: linear-gradient(
@@ -310,17 +254,204 @@ background-position: center; /*siempre la centra aun si se cambia el tamaño com
         rgba(0,0,0,0.5)
     )
     ,url("media/impresion1.jpeg")
-    
 }
 
 /*----------------------------------------------------------------------------------------------------------------------------------------
---------------------------------------------------------- Seccion: Sobre Nosotros ---------------------------------------------------------------
+----------------------------------------------- Footer ------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------*/
 
+.footer {       /*---Contenedor del footer---*/
+    position: relative;
+    width: 100%;
+    background: #3586ff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
+.redSocial, .menu { /*---Formato a las 2 filas---*/
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
 
+.redSocial_item, .menu_item {list-style: none;}    /*---limpieza de estilo de la lista (circulito)*/
 
+.redSocial_link {       /*iconos de las redes sociales*/
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
 
+.redSocial_link:hover {transform: translateY(-10px);}     /*hover a los iconos*/
+
+.menu_link {    /*NAV del footer*/
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-weight: 300;
+}
+
+.menu_link:hover {opacity: 1;}      /*hover al menu*/
+
+.footer p {
+    color: #fff;
+    margin: 15px 0 10px;
+    font-size: 12px;
+}
+
+.onda {
+    position: absolute;
+    top: -100px;
+    left: 0;        /*empieza con un left al 50%, consultar*/
+    width: 100%;
+    height: 100px;
+    background: url("./media/onda.png");
+    background-size: 1000px 100px;
+}
+
+/*--------------Propiedades de las ondas-----------------*/
+
+.onda#onda1 {
+    z-index: 2;
+    opacity: 0,8;
+    bottom: 0;
+    animation: animateWaves 4s linear infinite;
+}
+
+.onda#onda2 {
+    z-index: 3;
+    opacity: 0.3;
+    bottom: 10px;
+    animation: animate 4s linear infinite;
+}
+
+.onda#onda3 {
+    z-index: 4;
+    opacity: 0.1;
+    bottom: 15px;
+    animation: animateWaves 3s linear infinite;
+}
+
+.onda#onda4 {
+    z-index: 5;
+    opacity: 0.6;
+    bottom: 20px;
+    animation: animate 3s linear infinite;
+}
+
+/*--------------Animacion-----------------*/
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------- Formulario ------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------*/
+
+#Contactos .container .imagen img{display:none;}
+#Contactos .imagen p {display:none;}
+
+.mainForm p{        /*----------Texto del formulario------------   */
+    padding: 10px 15px;
+    font-size: 15px;
+}
+
+.form{      /*----------formulario------------   */
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;  
+}
+
+.campo{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.mainForm select{
+    position:flex; 
+    background-color: white;
+    padding: 10px 22px 10px 15px;
+    margin: 20px;
+    text-overflow: ellipsis;
+}
+
+.campo p{
+    color:blue;  
+    font-weight: bold;
+    margin: auto;
+    padding: 0;
+}
+
+.mainForm  input,textarea{
+    margin: 20px;
+    padding: 0 0 16px;
+    border-radius: 50px;
+    border: 1px solid #39c;
+    outline-color: #3586ff;
+}
+
+.mainForm  input{padding: 15px 15px;}
+
+.mainForm textarea {
+    margin: 20px;
+    padding: 15px 15px;
+    text-align: center;
+    text-justify: center;
+}
+
+.mainForm input::placeholder{ 
+    color: rgba(0,0,0,0.2); 
+    padding: 5px;
+  
+}
+
+#form-contacto button {
+    padding      : 5px;
+    font         : bold 1.6em sans-serif;
+    border       : 2px solid #333;
+    border-radius: 10px;
+    background   : none;
+    cursor       : pointer;
+    color:#0063f8;
+  }
+  
+  #form-contacto button:after {
+    content      : ">>>";
+  }
+  
+  #form-contacto button:hover,
+  #form-contacto button:focus {
+    outline     : none;
+    background  : gray;
+    color       : #FFF;
+  }
 /*----------------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------- Responsive Para PC(@media) ---------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -328,13 +459,18 @@ background-position: center; /*siempre la centra aun si se cambia el tamaño com
 
 @media (min-width: 995px){
 
-    /*----------Header---------------------*/
+
+    /*----------------------------------------*/
+    /*--------------MAIN/index-----------------*/
+    /*---------------------------------------*/
+
+    /*----------Header--------*/
 
     header{
         display:flex;
-        
+        justify-content: center;
         position:sticky;
-        top:10px;
+        top: 0px;
     }
     .container .navbar{
          margin-top: 0px;
@@ -357,7 +493,7 @@ background-position: center; /*siempre la centra aun si se cambia el tamaño com
     }
     
 
-    /*--------------Sobre_Nosotros-----------------*/
+    /*-------Sobre_Nosotros----------*/
     #Sobre_Nosotros .container {
         
         display: flex;
@@ -387,7 +523,7 @@ background-position: center; /*siempre la centra aun si se cambia el tamaño com
        
     }
 
-/*--------------Nuestros_Servicios-----------------*/
+    /*-------Nuestros_Servicios------------*/
     #Servicios .Cursos{
         flex-direction: row;
         justify-content:space-around;
@@ -397,146 +533,52 @@ background-position: center; /*siempre la centra aun si se cambia el tamaño com
         font-size: 13px;
         display: flex;
     }
-}    
+   
 
+    /*--------------Footer-----------------*/
+    
+    /*Mismo formato PC y mobile*/
 
-  
+    
+    
+    
+    /*----------------------------------------*/
+    /*--------------Contacto-----------------*/
+    /*---------------------------------------*/
 
-/*----------------------------------------------------------------------------------------------------------------------------------------
------------------------------------------------ footer --------------------------------------------
-------------------------------------------------------------------------------------------------------------------------------------------*/
+    #Contactos{padding: 50px 5px;}
+    #Contactos  .mainForm > p {display:none;}    /*Borro texto arriba de formulario*/
+    #form-contacto  .campo  p{padding-left: 20px;}
 
+    #Contactos .container{          /*aparezco la imagen y el texto del lado izquierdo*/
+        display:flex;
+        flex-direction: row-reverse;
+        gap: 10px;
+        justify-content:space-evenly;
+        align-content: center;
+        padding-left:0px;
+    }
 
+    #Contactos .container .imagen {  /*El texto secundario queda arriba de la imagen*/
+        display: flex;
+        flex-direction: column;
+    }
 
+    #Contactos .container .imagen img{   
+        width: calc(40vw);
+        margin:auto;
+        display: block;
+    }    
 
+    #Contactos .imagen p {
+        display: flex;    
+        text-align: center;
+        align-items: center;
+        font-size: 1.2rem;
+        margin:auto;
+        padding-top: 100px;
+        max-width: 500px;
+    }
 
-/*---Contenedor del footer---*/
-.footer {
-    position: relative;
-    width: 100%;
-    background: #3588ff;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-}
-
-
-/*---Formato a las 2 filas---*/
-.redSocial, .menu {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0;
-  flex-wrap: wrap;
-}
-
-
-
-/*---limpieza de estilo de la lista (circulito)*/
-.redSocial_item, .menu_item {
-  list-style: none;
-}
-
-
-/*iconos de las redes sociales*/
-.redSocial_link {
-  font-size: 2rem;
-  color: #fff;
-  margin: 0 10px;
-  display: inline-block;
-  transition: 0.5s;
-}
-
-/*hover a los iconos*/
-.redSocial_link:hover {
-  transform: translateY(-10px);
-}
-
-/*NAV del footer*/
-.menu_link {
-  font-size: 1.2rem;
-  color: #fff;
-  margin: 0 10px;
-  display: inline-block;
-  transition: 0.5s;
-  text-decoration: none;
-  opacity: 0.75;
-  font-weight: 300;
-}
-
-/*hover al menu*/
-
-.menu_link:hover {
-  opacity: 1;
-}
-
-.footer p {
-  color: #fff;
-  margin: 15px 0 10px;
-  font-size: 12px;
-}
-
-.onda {
-  position: absolute;
-  top: -100px;
-  left: 0;        /*empieza con un left al 50%, consultar*/
-  width: 100%;
-  height: 100px;
-  background: url("./media/onda.png");
-  background-size: 1000px 100px;
-}
-
-
-/*--------------Propiedades de las ondas-----------------*/
-
-.onda#onda1 {
-  z-index: 2;
-  opacity: 0,8;
-  bottom: 0;
-  animation: animateWaves 4s linear infinite;
-}
-
-.onda#onda2 {
-  z-index: 3;
-  opacity: 0.3;
-  bottom: 10px;
-  animation: animate 4s linear infinite;
-}
-
-.onda#onda3 {
-  z-index: 4;
-  opacity: 0.1;
-  bottom: 15px;
-  animation: animateWaves 3s linear infinite;
-}
-
-.onda#onda4 {
-  z-index: 5;
-  opacity: 0.6;
-  bottom: 20px;
-  animation: animate 3s linear infinite;
-}
-
-/*--------------Animacion-----------------*/
-
-@keyframes animateWaves {
-  0% {
-    background-position-x: 1000px;
-  }
-  100% {
-    background-position-x: 0px;
-  }
-}
-
-@keyframes animate {
-  0% {
-    background-position-x: -1000px;
-  }
-  100% {
-    background-position-x: 0px;
-  }
-}
+    
+    }
