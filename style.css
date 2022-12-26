@@ -146,7 +146,7 @@ header .logo:hover{     /*Se pone gris al pasar el mouse*/
         0deg,
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
-    ),url("media/principal.jpg");
+    ),url("./media/i-HERO.jpg");
     background-repeat: no-repeat; 
     background-size: cover;         /*cubre el ancho del hero*/
     background-position: center;    /*siempre la centra aun si se cambia el tamaño completo de la imagen*/
@@ -158,7 +158,7 @@ header .logo:hover{     /*Se pone gris al pasar el mouse*/
         0deg,
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
-    ),url("media/herocontact.jpg");
+    ),url("./media/i-HERO2.jpg");
     background-repeat: no-repeat; 
     background-size: cover; /*cubre el ancho del hero*/
     background-position: center; /*siempre la centra aun si se cambia el tamaño completo de la imagen*/
@@ -170,7 +170,7 @@ header .logo:hover{     /*Se pone gris al pasar el mouse*/
         0deg,
         rgba(0,0,0,0),
         rgba(0,0,0,0)
-    ),url("media/heroservicios.jpg");
+    ),url("./media/i-HERO3.jpg");
     background-repeat: no-repeat; 
     background-size: cover; /*cubre el ancho del hero*/
     background-position: center; /*siempre la centra aun si se cambia el tamaño completo de la imagen*/
@@ -249,7 +249,7 @@ header .logo:hover{     /*Se pone gris al pasar el mouse*/
         0deg,
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
-    ),url("media/tomografia.png");
+    ),url("./media/i-tomografia.png");
 }
 
 .cuadrados:nth-child(2){                /*Seleccionamos el segundo de los cuadrados*/
@@ -258,7 +258,7 @@ header .logo:hover{     /*Se pone gris al pasar el mouse*/
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("media/scanneo2.jpeg")
+    ,url("./media/i-scan.jpeg")
 }
 
 .cuadrados:nth-child(3){                /*Seleccionamos el tercero de los cuadrados*/
@@ -267,7 +267,7 @@ header .logo:hover{     /*Se pone gris al pasar el mouse*/
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
     )
-    ,url("media/impresion1.jpeg")
+    ,url("./media/i-impresion.jpeg")
 }
 
 
@@ -370,7 +370,7 @@ header .logo:hover{     /*Se pone gris al pasar el mouse*/
     left: 0;        /*empieza con un left al 50%, consultar*/
     width: 100%;
     height: 100px;
-    background: url("./media/onda.png");
+    background: url("./media/i-onda.png");
     background-size: 1000px 100px;
 }
 
@@ -595,9 +595,6 @@ header .logo:hover{     /*Se pone gris al pasar el mouse*/
     
     /*Mismo formato PC y mobile*/
 
-    
-    
-    
     /*----------------------------------------*/
     /*--------------Contacto-----------------*/
     /*---------------------------------------*/
